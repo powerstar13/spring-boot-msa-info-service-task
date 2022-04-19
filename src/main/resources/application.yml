@@ -1,0 +1,2 @@
+server:
+  port: 8081 # 2개 이상의 MSA App 구동 위해 port 변경
