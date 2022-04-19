@@ -29,3 +29,34 @@ WebClient
 
 ![img.png](img.png)
 
+# 생성된 파일 및 패키지 위치
+
+1. resources
+   1. application.yml
+   2. schema.sql
+
+```java
+// R2dbcConfig
+// WebFluxConfig
+package study.webclient.msainfoservicetask.infrastructure.config;
+
+// Person
+// PersonFindSpecification
+// PersonRepository
+// PersonRepositoryTest >>> TEST
+package study.webclient.msainfoservicetask.domain.model;
+
+// PersonApplicationService
+// PersonApplicationServiceTst >>> TEST
+package study.webclient.msainfoservicetask.application.person;
+
+// PersonJobResponse
+package study.webclient.msainfoservicetask.application.person.response;
+
+// PersonHandler
+// PersonHandlerTest >>> TEST
+package study.webclient.msainfoservicetask.presentation.webFlux;
+
+// BadRequestResponse
+package study.webclient.msainfoservicetask.presentation.shared.response;
+```
