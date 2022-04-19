@@ -1,8 +1,11 @@
 package study.webclient.msainfoservicetask.domain.model;
 
-import org.springframework.data.r2dbc.repository.R2dbcRepository;
+import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;
+import reactor.core.publisher.Mono;
 
 @Repository
-public interface PersonRepository extends R2dbcRepository<Person, Long> {
+public interface PersonRepository extends ReactiveCrudRepository<Person, Long> {
+
+    Mono<Person> findFirstByPersonName(String personName); // 이름으로 정보 조회
 }
