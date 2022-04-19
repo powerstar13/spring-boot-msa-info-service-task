@@ -4,9 +4,10 @@ server:
 spring:
   r2dbc:
     url: r2dbc:h2:mem:///msa
-    username: msa
+    username: sa
     password:
 
-logging.level.org.springframework.r2dbc: DEBUG
-
-debug: true
+logging:
+  level:
+    root: INFO
+    org.springframework.r2dbc: DEBUG
