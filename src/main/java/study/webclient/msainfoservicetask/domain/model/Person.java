@@ -1,21 +1,19 @@
 package study.webclient.msainfoservicetask.domain.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
 @Getter
 @Builder
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(value = "person")
 public class Person {
 
-    @Id
+    @Id // ID로 엔티티를 식별한다.
     @Column(value = "personId")
     private Long personId; // 고유번호
 
