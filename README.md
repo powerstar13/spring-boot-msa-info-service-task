@@ -15,11 +15,12 @@ WebClient
 
 # Response
 
+`application/json`
+- 직업 데이터가 추가 되었다.
 ```json
-// application/json
 {
 	"to": "$name",
-	"job": "", // 직업 데이터가 추가 되었다.
+	"job": "",
 	"message": "hello $name"
 }
 ```
