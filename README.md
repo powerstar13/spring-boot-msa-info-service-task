@@ -7,11 +7,16 @@
 
 # Spec
 
-WebClient
+1. Spring 5+ Or SpringBoot 2+
+2. Java 8+
+3. WebFlux
+4. Functional Endpoint
+5. WebClient
 
 # Request
 
-`GET localhost:8080/hello?name=$name`
+1. 외부 통신 : `GET localhost:8080/hello?name=$name`
+2. 내부 통신 : `GET localhost:8081/info-service/job?name=$name`
 
 # Response
 
