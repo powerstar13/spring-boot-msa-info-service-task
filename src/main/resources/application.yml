@@ -3,7 +3,7 @@ server:
 
 spring:
   r2dbc:
-    url: r2dbc:h2:msa:///task
+    url: r2dbc:h2:mem:///msa
     username: msa
     password:
 
