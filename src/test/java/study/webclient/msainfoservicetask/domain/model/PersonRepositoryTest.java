@@ -20,8 +20,11 @@ class PersonRepositoryTest {
     @Test
     void findAll() {
 
+        Mono<Person> fallback = Mono.error(new ServerWebInputException("조회된 정보가 없습니다.")); // 조회된 정보가 없을 경우 fallback할 error 처리
+
         Flux<Person> personFlux = personRepository.findAll()
-            .log();
+            .log()
+            .switchIfEmpty(fallback);
 
         StepVerifier.create(personFlux)
             .assertNext(person -> {
@@ -42,10 +45,13 @@ class PersonRepositoryTest {
 
         String name = "홍준성";
 
-        Mono<Person> personMono = personRepository.findFirstByPersonName(name)
-            .log();
+        Mono<Person> fallback = Mono.error(new ServerWebInputException(name + "이름으로 조회되는 정보가 없습니다.")); // 조회된 정보가 없을 경우 fallback할 error 처리
 
-        StepVerifier.create(personMono)
+        Mono<Person> foundedPerson = personRepository.findFirstByPersonName(name)
+            .log()
+            .switchIfEmpty(fallback);
+
+        StepVerifier.create(foundedPerson)
             .assertNext(person -> {
                 assertEquals("홍준성", person.getPersonName());
                 assertEquals("BE", person.getPersonJob());
@@ -57,13 +63,15 @@ class PersonRepositoryTest {
     @Test
     void findFirstByPersonName_notFound() {
 
-        String name = "없는이름";
+        String name = "노존재";
 
-        Mono<Void> personVoid = personRepository.findFirstByPersonName(name)
+        Mono<Person> fallback = Mono.error(new ServerWebInputException(name + "이름으로 조회되는 정보가 없습니다.")); // 조회된 정보가 없을 경우 fallback할 error 처리
+
+        Mono<Person> personMono = personRepository.findFirstByPersonName(name)
             .log()
-            .thenEmpty(s -> s.onError(new ServerWebInputException("이름으로 조회되는 정보가 없습니다.")));
+            .switchIfEmpty(fallback);
 
-        StepVerifier.create(personVoid)
+        StepVerifier.create(personMono)
             .expectError(ServerWebInputException.class)
             .verify();
     }
