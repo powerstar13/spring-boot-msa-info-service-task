@@ -1,3 +1,14 @@
+
+## Github Repository Link
+
+`현재 접근하신 레포지토리는 InfoService Server 입니다.`
+
+### [SayHello Server](https://github.com/powerstar13/spring-boot-webflux-functional-endpoints-task)
+- Server port = 8080
+### [InfoService Server](https://github.com/powerstar13/spring-boot-msa-info-service-task)
+- Server port = 8081
+
+
 # Requirement
 
 1. SayHello Server에서 InfoService Server로 내부 호출
