@@ -4,8 +4,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 import study.webclient.msainfoservicetask.application.person.response.PersonJobResponse;
-import study.webclient.msainfoservicetask.domain.model.Person;
-import study.webclient.msainfoservicetask.domain.model.PersonFindSpecification;
+import study.webclient.msainfoservicetask.domain.model.person.Person;
+import study.webclient.msainfoservicetask.domain.model.person.PersonFindSpecification;
 
 @Service
 @RequiredArgsConstructor

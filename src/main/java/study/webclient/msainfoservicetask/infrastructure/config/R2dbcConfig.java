@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.r2dbc.config.AbstractR2dbcConfiguration;
 import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories;
-import study.webclient.msainfoservicetask.domain.model.Person;
-import study.webclient.msainfoservicetask.domain.model.PersonRepository;
+import study.webclient.msainfoservicetask.domain.model.person.Person;
+import study.webclient.msainfoservicetask.domain.model.person.PersonRepository;
 
 import java.time.Duration;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package study.webclient.msainfoservicetask.domain.model;
+package study.webclient.msainfoservicetask.domain.model.person;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;

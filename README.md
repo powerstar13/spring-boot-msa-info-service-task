@@ -73,7 +73,7 @@ package study.webclient.msainfoservicetask.infrastructure.config;
 // PersonFindSpecification
 // PersonRepository
 // PersonRepositoryTest >>> TEST
-package study.webclient.msainfoservicetask.domain.model;
+package study.webclient.msainfoservicetask.domain.model.person;
 
 // PersonApplicationService
 // PersonApplicationServiceTest >>> TEST

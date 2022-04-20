@@ -1,4 +1,4 @@
-package study.webclient.msainfoservicetask.domain.model;
+package study.webclient.msainfoservicetask.domain.model.person;
 
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;

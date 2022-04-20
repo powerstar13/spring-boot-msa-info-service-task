@@ -1,6 +1,5 @@
 package study.webclient.msainfoservicetask.domain.model;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -8,6 +7,8 @@ import org.springframework.web.server.ServerWebInputException;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
+import study.webclient.msainfoservicetask.domain.model.person.Person;
+import study.webclient.msainfoservicetask.domain.model.person.PersonRepository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
